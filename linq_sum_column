@@ -1,0 +1,8 @@
+      public decimal? GetOrderTotal(long orderId)
+        {
+
+            decimal? orderSum = _RepositoryOrder.All.Distinct().Where(o => o.OrderId == orderId).Sum( t => t.FinalPrice);
+
+
+            return orderSum;
+        }
