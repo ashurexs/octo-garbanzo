@@ -1,0 +1,15 @@
+
+
+        public void Populate (ViewModel VM)
+        {
+            VM.List = new List<ViewModel.Item>();
+            foreach (var item in this.GetServiceMethod())
+            {
+                ViewModel.Item iVM = new ViewModel.ItemVM();
+                iVM.items = item.ItemNumber;
+            if (!VM.List.Exists(x => x.items == iVM.items))
+                {
+                    VM.List.Add(iVM);
+                }
+            }
+        }
