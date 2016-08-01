@@ -1,0 +1,10 @@
+list.Sort((x, y) => x.Substring(3).CompareTo(y.Substring(3)));
+
+list.Sort((s1, s2) => string.Compare(s1, 3, s2, 3, int.MaxValue));
+
+List<string>
+[List<string>].OrderBy(s => s.Substring(3)).ToList();
+
+var l = new List<string>(){inject strings here};
+foreach (var s in l.OrderBy(s => s.ToLower().Substring(3)).ToList())
+    Console.WriteLine(s);
